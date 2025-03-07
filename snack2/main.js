@@ -22,3 +22,13 @@ for (let i = 0; i < footballTeam.length; i++) {
   footballTeam[i].punti = punti;
   footballTeam[i].falli = falli;
 }
+// CREO UN ARRAY VUOTO CHE CONTENTA I NOMI DELLE SQUADRE E I FALLI
+const newList = [];
+// CREO LA FUNZIONE newArr CHE CONTERRA' I NOMI E I FALLI
+function newArr(nome, falli) {
+  return { nome, falli }; // RESTITUISCO GLI OGGETTI
+}
+for (let i = 0; i < footballTeam.length; i++) {
+  newList.push(newArr(footballTeam[i].nome, footballTeam[i].falli)); // METTO NELLA NUOVA LISTA I NOMI E I FALLI USANDO LA FUNZIONE
+}
+console.log(newList); // LISTA CON NOME SQUADRA E FALLI
