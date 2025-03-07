@@ -10,6 +10,15 @@ console.log(footballTeam[1].nome); // esce il nome della squadra Falcon United, 
 console.log(footballTeam[1].punti); // escono i punti della squadra Falcon United, se era 0 uscivano quelli di Dynamo Tigers ecc...
 console.log(footballTeam[1].falli); // escono i falli della squadra Falcon United, se era 0 uscivano quelli di Dynamo Tigers ecc...
 
-// NUMERI RANDOMICI CON MATHFLOOR
-let randomNumber = Math.floor(Math.random() * 10) + 1; // numeri da 1 a 10
-console.log(randomNumber);
+// METTO IN DELLE VARIABILI LET I PUNTI E I FALLI CON I NUMERI RANDOMICI
+for (let i = 0; i < footballTeam.length; i++) {
+  console.log(footballTeam[i]);
+  // NUMERI RANDOMICI CON MATHFLOOR
+  punti = Math.floor(Math.random() * 10) + 1;
+  falli = Math.floor(Math.random() * 10) + 1;
+  console.log(punti);
+  console.log(falli);
+  // ASSEGNO I NUMERI RANDOMICI
+  footballTeam[i].punti = punti;
+  footballTeam[i].falli = falli;
+}
